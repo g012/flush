@@ -1,0 +1,5 @@
+wine ../../gfx2gba.exe traject.pcx traject.txt -n traject -c -8 -o -v
+php maketraj.php
+cp traject.h ../source/traject.h
+
+

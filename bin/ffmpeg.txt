@@ -1,0 +1,1 @@
+ffmpeg -y -i demo.avi -strict -2 -s 258x258 -crf 23 -preset veryslow -pix_fmt yuv420p bin_Final.mp4

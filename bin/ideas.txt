@@ -1,0 +1,30 @@
+<g013> et si on commence par l'anim fluide, suivi des saccades comme ça, puis on rajoute des flash d'écrans entre les saccades ?
+<g013> jusqu'à switcher vers le screen d'après
+<g013> limite on voit la tête du robot pendant les flash
+<g013> puis on passe pour de bon au robot
+<g013> et pendant les "tschhhhh" de la zic sur la fin du fx
+<g013> le faire fluide pendant leur durée
+<g013> (un dixième de seconde ou quoi)
+
+Nom de prod ?
+-------------
+
+* didit
+* pamieu
+
+
+Transition zik Salami -> Koniec
+-------------------------------
+
+donc l'ideal je dirais ça serait à la fin du pattern où il y a la
+mélodie sans la basse...  sur le tracker, c'est la fin de la position
+29 dans l'enchainement des patterns
+
+VRGirl
+------
+
+Je t'envoie les frames de l'animation ce midi. Je pense que randomiser l'ordre des frames sera suffisant pour faire illusion, surtout si en plus tu ajoutes des décalages horizontaux aléatoirement. 
+
+Pour un effet optimal, il faut montrer la première frame (celle sans distorsion) la plupart du temps, et alterner des phases de glitchs de quelques frames. Le mieux serait d'afficher beaucoup de glitchs et de décalages importants les deux premières secondes, puis une stabilisation progressive (ratio stable/glitchs qui augmente et moins de décalages, plus petits) puis en fin d'effet l'image qui devient instable de nouveau. Ça serait même cool d'avoir une transition en tout début et fin d'effet où tu n'affiches qu'une ligne sur deux pendant quelques frames, puis une sur trois. Ça ferait une belle transition tout en douceur ;)
+
+On pourrait effectivement aussi changer les palettes pour certaines frames. Tu peux juste incrémenter les index de 1 puis 2 puis 1 de temps en temps (1 ou 2 frames à chaque fois, une fois toutes les 2-3 secondes en gros) pour que ça donne l'impression de flasher légèrement. 

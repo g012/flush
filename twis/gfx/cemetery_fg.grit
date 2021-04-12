@@ -1,0 +1,3 @@
+# Mode7 FG
+# 8b tiles, 32x32 tiles, LZ77 compressed
+-gB8 -mLs -mR8 -ma 0 -p! -Zl

@@ -1,0 +1,63 @@
+.include "globals.inc"
+.include "banksetup.inc"
+
+.importzp _fx_data      ; Space for FX Data
+.export _fx_pf_kernel
+
+ptr   = _fx_data
+
+.segment CODE_SEGMENT
+_fx_pf_kernel:
+                ;; Starts by initializing the ptr array of pointer to the data
+                popax
+                ldy #0
+@ptrinit:
+                sta ptr, y
+                stx ptr + 1, y
+                cpy #10                 ; 6 pointers to update
+                beq @endinit
+                ;; needs updating ptr destination offset
+                iny
+                iny
+                ;; needs updating (data) source pointer (+40 lines)
+                clc
+                adc #40
+                bcc @endadd
+                inx
+@endadd:
+                jmp @ptrinit
+@endinit:
+
+                jsr _wait_vblank
+                LDY #39
+                .repeat 4       ; Skip 4 lines to center picture
+                STA WSYNC
+                .endrepeat
+Draw_Picture:
+                ldx #6          ; Repeat each line 6 times
+@big_line:
+                STA WSYNC
+                LDA (ptr),Y
+                STA PF0
+                LDA (ptr+2),Y
+                STA PF1
+                LDA (ptr+4),Y
+                STA PF2
+                LDA (ptr+6),Y
+                STA PF0
+                LDA (ptr+8),Y
+                STA PF1
+                LDA (ptr+10),Y
+                STA PF2
+                dex
+                bne @big_line
+
+                DEY
+                BPL Draw_Picture
+                STA WSYNC
+
+                lda #$0
+                sta PF0
+                sta PF1
+                sta PF2
+                rts

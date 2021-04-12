@@ -1,0 +1,7 @@
+* Noise FX
+  * Stay on noise once scrawls have been displayed
+  * Tune noisy texts timing
+  * Fix 0 seed value issue when looping seed
+
+* Song
+  * Switch song before credits

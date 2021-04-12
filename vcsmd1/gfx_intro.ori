@@ -1,0 +1,44 @@
+data gfx_musicart1 {
+     &<gfx_musicart1_ixd_pf0 &>gfx_musicart1_ixd_pf0
+     &<gfx_musicart1_ixd_pf1 &>gfx_musicart1_ixd_pf1
+     &<gfx_musicart1_ixd_pf2 &>gfx_musicart1_ixd_pf2
+     &<gfx_musicart1_ixd_pf3 &>gfx_musicart1_ixd_pf3
+     &<gfx_musicart1_ixd_pf4 &>gfx_musicart1_ixd_pf4
+     &<gfx_musicart1_ixd_pf5 &>gfx_musicart1_ixd_pf5
+}
+
+inline gfx_40x40line {
+    wsync
+    a=buffer,x
+    COLUBK=a
+    PF0=a=(gfx_ptr),y
+    PF1=a=(gfx_ptr+2),y
+    PF2=a=(gfx_ptr+4),y
+    PF0=a=(gfx_ptr+6),y
+    PF1=a=(gfx_ptr+8),y
+    PF2=a=(gfx_ptr+10),y
+}
+
+func gfx_40x40 {
+  COLUPF=a=0
+  y=0 a=buffer
+
+.loop:
+    gfx_40x40line gfx_40x40line gfx_40x40line
+    gfx_40x40line gfx_40x40line gfx_40x40line
+    y++
+    x=a a=y
+    y?40
+    == goto .end_loop
+    goto .loop
+
+.end_loop:
+  wsync
+  COLUBK=COLUPF=PF0=PF1=PF2=a=0
+}
+
+func gfx_40x40_setup {
+     x=11 {
+       gfx_ptr,x=a=gfx_musicart1,x x--
+     } >=0
+}

@@ -1,0 +1,6 @@
+-system A2600
+
+common.k65			core
+song_trackdata.k65  core
+song_player.k65     core
+main.k65            core

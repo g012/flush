@@ -1,0 +1,7 @@
+/build
+/tmp
+*~
+*.gba
+*.elf
+*.pyc
+.DS_Store

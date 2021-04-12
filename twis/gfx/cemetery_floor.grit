@@ -1,0 +1,3 @@
+# Floor tiles, with tile 0 transparent
+# affine map, 2x1t, LZ77 compressed.
+-gB8 -mRa -mLa -p! -Zl

@@ -1,0 +1,17 @@
+*~
+*.o
+*.lst
+*.exe
+c/*.s
+/test_raw.sym
+/demo.bin
+/demo.sym
+/main.bin
+/main.sym
+/program.bin
+/program.sym
+/tmp
+/cfg
+/snap
+/tools/vcsconv
+!k65files.lst

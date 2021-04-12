@@ -1,0 +1,6 @@
+wine ../../gfx2gba.exe revision_entrance.jpg entrance.bin -n entrance -v -b -s 1 
+wine ../../gfx2gba.exe revision_entrance.jpg -v -b -p entrancepal.bin -s 2
+mv *.bin ../data/
+
+
+

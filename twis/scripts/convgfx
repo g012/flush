@@ -1,0 +1,30 @@
+#!/bin/bash
+if test $# -eq 2
+then
+	echo "********************************"
+	echo "********** Conversion **********"
+	echo "********************************"
+else
+	clear
+	echo "********************************"
+	echo "**********    Aide    **********"
+	echo "********************************"
+	echo ""
+	echo "Il faut 2 arguments ..."
+	echo ""
+	echo "Syntax : convgfx fichier nomvariable (qui apparait dans le .h)"
+	echo ""
+	echo "Le .h est mis automatiquement"
+	echo " Merci ... cordialement"
+
+	exit 0
+fi
+
+	name=`basename "$1"`
+	wine gfx2gba.exe $1 ${name%.*}.h -n $2 -c -8 -o -v
+	#cp ${name%.*}.h /home/${name%.*}.h
+
+	echo " Fait !!!!"
+exit 0
+
+

@@ -1,0 +1,17 @@
+longueur des patterns : 47
+tous les mmLayerMain.row % 12 == 0 on un kick ou un snare
+
+position (hex) / commentaire
+01. Intro 
+04. event : "Claquement fort"
+0C. Refrain
+12. Début du thème normal
+13. Amorce theme shadow of the beast
+14. shadow of the beast
+1C. fin du thème shadow of the wurst retour au thème normal
+1D. Début thème normal
+24. Fin début thème normal 
+25. Refrain
+2D. Début chute
+31. 2ème partie (chute)
+34. Fin et retour a 04
